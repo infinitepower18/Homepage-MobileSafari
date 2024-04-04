@@ -14,7 +14,7 @@ To set up, enable the extension and ensure it is set as the new tab page. To set
 
 ## Download
 
-[![image](https://ahnafmahmud.com/files/badges/AppStore.svg)](https://apps.apple.com/us/app/clone-in-vs-code/id1640113540)
+[![image](https://ahnafmahmud.com/files/badges/AppStore.svg)](https://apps.apple.com/app/homepage-for-safari/id6481118559)
 
 Available for iOS and visionOS.
 

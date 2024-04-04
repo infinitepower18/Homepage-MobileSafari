@@ -1,3 +1,5 @@
+![GitHub](https://img.shields.io/github/license/infinitepower18/Homepage-MobileSafari)
+
 # Homepage for Mobile Safari
 
 With this extension, you can set any URL and Safari will automatically load your homepage upon opening a new tab.

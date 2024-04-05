@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <title>Homepage</title>
+ <style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  div {
+    margin-top: 5px;
+  }
+  p {
+    margin-top: 3px;
+  }
+  h1 {
+    margin-bottom: 5px;
+    margin-top: 3px;
+  }
+  .container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      max-width: 90%;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212;
+      color: white;
+      color-scheme: dark;
+    }
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type="url"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+ </style>
+</head>
+
+<body>
+ <div class="container">
+  <div> Homepage: <br /><br /><input type="url" id="homepage" name="homepage" size="50" placeholder="URL" /><br /> </div>
+  <div> <button id="save">Save</button> </div> <br />
+  <p id="status"></p>
+  <script src="options.js"></script>
+ </div>
+</body>
+
+</html>

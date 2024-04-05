@@ -14,8 +14,6 @@ To set up, enable the extension and ensure it is set as the new tab page. To set
 
 3. Select the extension and tap Settings
 
-**Source code coming soon**
-
 ## Download
 
 [![image](https://ahnafmahmud.com/files/badges/AppStore.svg)](https://apps.apple.com/app/homepage-for-safari/id6481118559)

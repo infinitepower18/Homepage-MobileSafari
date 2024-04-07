@@ -1,10 +1,10 @@
 ![GitHub](https://img.shields.io/github/license/infinitepower18/Homepage-MobileSafari)
 
-# Homepage for Mobile Safari
+# Homepage for Safari iOS/visionOS
 
 With this extension, you can set any URL and Safari will automatically load your homepage upon opening a new tab.
 
-As Safari on iOS and visionOS doesn't have the ability to set a homepage unlike Mac, this extension was created to solve this.
+Unlike macOS, Safari on iOS and visionOS doesn't have the ability to set a homepage, so this extension was created to solve this.
 
 To set up, enable the extension and ensure it is set as the new tab page. To set the homepage URL of your choice:
 

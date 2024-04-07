@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C38E0202BC3305800594C2C /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 9C38E01F2BC3305800594C2C /* _locales */; };
+		9C38E0232BC3314900594C2C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9C38E0222BC3314900594C2C /* Localizable.xcstrings */; };
 		9CC4B4F82BBEF5B4007BC68B /* HomepageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4B4F72BBEF5B4007BC68B /* HomepageApp.swift */; };
 		9CC4B4FA2BBEF5B4007BC68B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */; };
 		9CC4B4FC2BBEF5B5007BC68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC4B4FB2BBEF5B5007BC68B /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		9C38E01F2BC3305800594C2C /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		9C38E0222BC3314900594C2C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		9CC4B4F42BBEF5B4007BC68B /* Homepage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC4B4F72BBEF5B4007BC68B /* HomepageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageApp.swift; sourceTree = "<group>"; };
 		9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C38E0212BC3313800594C2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C38E0222BC3314900594C2C /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		9CC4B4EB2BBEF5B4007BC68B = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 				9CC4B4F72BBEF5B4007BC68B /* HomepageApp.swift */,
 				9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */,
 				9CC4B4FB2BBEF5B5007BC68B /* Assets.xcassets */,
+				9C38E0212BC3313800594C2C /* Resources */,
 				9CC4B4FD2BBEF5B5007BC68B /* Preview Content */,
 			);
 			path = Homepage;
@@ -231,6 +242,7 @@
 			files = (
 				9CC4B4FF2BBEF5B5007BC68B /* Preview Assets.xcassets in Resources */,
 				9CC4B4FC2BBEF5B5007BC68B /* Assets.xcassets in Resources */,
+				9C38E0232BC3314900594C2C /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,14 +14,14 @@ struct ContentView: View {
                 .resizable()
                 .frame(width: 64, height: 64)
                 .cornerRadius(10)
-            Text("Homepage Safari Extension")
+            Text("title")
                 .font(.title)
-            Text("To set up, enable the extension and ensure it is set as the new tab page.\n\nTo set the homepage URL of your choice:\n\n1. Open your device's settings app\n\n2. Select the Safari app followed by Extensions\n\n3. Select the extension and tap Settings")
+            Text("helpText")
             Button {
                 let url = URL(string: "https://github.com/infinitepower18/Homepage-MobileSafari")
                 UIApplication.shared.open(url!)
             } label: {
-                Text("View on GitHub")
+                Text("viewRepo")
             }
         }
         .padding()

@@ -1,0 +1,10 @@
+{
+    "extension_name": {
+        "message": "Homepage",
+        "description": "The display name for the extension."
+    },
+    "extension_description": {
+        "message": "Set any homepage in Safari",
+        "description": "Description of what the extension does."
+    }
+}

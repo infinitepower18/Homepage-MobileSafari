@@ -1,10 +1,11 @@
 {
-  "name": "Homepage",
+  "default_locale": "en",
+  "name": "__MSG_extension_name__",
   "chrome_url_overrides": {
     "newtab": "homepage.html"
   },
-  "version": "1.0.0",
-  "description": "Set any homepage in Safari",
+  "version": "1.0.2",
+  "description": "__MSG_extension_description__",
   "options_ui": {
     "page": "options.html"
   },
@@ -17,10 +18,9 @@
   },
   "permissions": ["storage"],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "16": "images/toolbar-icon-16.png",
       "19": "images/toolbar-icon-19.png",
@@ -30,5 +30,5 @@
       "72": "images/toolbar-icon-72.png"
     }
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }

@@ -1,6 +1,6 @@
 chrome.action.onClicked.addListener((tab) => {
   chrome.storage.sync.get({
-    homepage: "https://google.com",
+    homepage: "options.html",
   }, function(items) {
     chrome.tabs.update({
       url: items.homepage

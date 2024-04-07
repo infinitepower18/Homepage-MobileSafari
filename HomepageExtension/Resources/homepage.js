@@ -1,6 +1,6 @@
 function redirect() {
   chrome.storage.sync.get({
-      homepage: "https://google.com",
+      homepage: "options.html",
     },
     function(items) {
       window.location.href = items.homepage;

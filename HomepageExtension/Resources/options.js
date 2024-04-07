@@ -5,10 +5,10 @@ function save_options() {
     },
     function() {
       var status = document.getElementById("status");
-      status.textContent = "Homepage saved.";
+      status.textContent = "Homepage saved. Your homepage will be loaded the next time you open a new tab.";
       setTimeout(function() {
         status.textContent = "";
-      }, 3000);
+      }, 5000);
     }
   );
 }
@@ -31,7 +31,7 @@ function validateForm() {
 
 function restore_options() {
   chrome.storage.sync.get({
-      homepage: "https://google.com",
+      homepage: "",
     },
     function(items) {
       document.getElementById("homepage").value = items.homepage;

@@ -13,7 +13,7 @@ function save_options() {
   );
 }
 
-function validateForm() {
+function validateURL() {
   const urlInput = document.getElementById("homepage");
   const url = urlInput.value;
 
@@ -39,4 +39,4 @@ function restore_options() {
   );
 }
 document.addEventListener("DOMContentLoaded", restore_options);
-document.getElementById("save").addEventListener("click", validateForm);
+document.getElementById("save").addEventListener("click", validateURL);

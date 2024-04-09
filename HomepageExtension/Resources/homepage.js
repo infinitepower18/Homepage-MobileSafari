@@ -3,7 +3,7 @@ function redirect() {
       homepage: "options.html",
     },
     function(items) {
-      window.location.href = items.homepage;
+      window.location.replace(items.homepage);
     }
   );
 }

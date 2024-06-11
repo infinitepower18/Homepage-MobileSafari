@@ -1,13 +1,46 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "helpText" : {
+    "homepageSaved" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To set up, enable the extension and ensure it is set as the new tab page.\n\nTo change the homepage URL:\n\n1. Open your device's settings app\n\n2. Select the Safari app followed by Extensions\n\n3. Select the extension and tap Settings"
+            "value" : "Homepage Saved"
+          }
+        }
+      }
+    },
+    "ok" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "setupHelp" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To load your homepage whenever a new tab is opened, ensure this app is set under Open New Tabs in Safari Settings."
           }
         }
       }
@@ -19,6 +52,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Homepage Safari Extension"
+          }
+        }
+      }
+    },
+    "url" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL"
           }
         }
       }

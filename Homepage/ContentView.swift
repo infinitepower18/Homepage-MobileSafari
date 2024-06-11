@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State private var urlInput = ""
+    @State private var showSuccessAlert = false
+
     var body: some View {
         VStack(spacing: 20) {
             Image(uiImage: UIImage(named: "AppIcon")!)
@@ -16,7 +20,22 @@ struct ContentView: View {
                 .cornerRadius(10)
             Text("title")
                 .font(.title)
-            Text("helpText")
+            TextField(
+                "url",
+                text: $urlInput
+            )
+            .keyboardType(.URL)
+            .autocorrectionDisabled(true)
+            .textInputAutocapitalization(.never)
+            .textFieldStyle(.roundedBorder)
+            Button {
+                UserDefaults.group?.set(urlInput, forKey: "homepage")
+                showSuccessAlert = true
+            } label: {
+                Text("save")
+                    .font(.title)
+            }
+            .disabled(!URLValidator.isValidURL(urlInput))
             Button {
                 let url = URL(string: "https://github.com/infinitepower18/Homepage-MobileSafari")
                 UIApplication.shared.open(url!)
@@ -25,6 +44,16 @@ struct ContentView: View {
             }
         }
         .padding()
+        .onAppear {
+            urlInput = UserDefaults.group?.string(forKey: "homepage") ?? ""
+        }
+        .alert(isPresented: $showSuccessAlert) {
+            Alert(
+                title: Text("homepageSaved"),
+                message: Text("setupHelp"), 
+                dismissButton: .default(Text("ok"))
+            )
+        }
     }
 }
 

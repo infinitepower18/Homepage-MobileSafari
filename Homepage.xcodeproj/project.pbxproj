@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9C38E0202BC3305800594C2C /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 9C38E01F2BC3305800594C2C /* _locales */; };
 		9C38E0232BC3314900594C2C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9C38E0222BC3314900594C2C /* Localizable.xcstrings */; };
+		9C9955762C18B85000EB9E17 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9955752C18B85000EB9E17 /* UserDefaults+Extension.swift */; };
+		9C9955782C18B9EC00EB9E17 /* URLValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9955772C18B9EC00EB9E17 /* URLValidator.swift */; };
 		9CC4B4F82BBEF5B4007BC68B /* HomepageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4B4F72BBEF5B4007BC68B /* HomepageApp.swift */; };
 		9CC4B4FA2BBEF5B4007BC68B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */; };
 		9CC4B4FC2BBEF5B5007BC68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC4B4FB2BBEF5B5007BC68B /* Assets.xcassets */; };
@@ -51,6 +53,9 @@
 /* Begin PBXFileReference section */
 		9C38E01F2BC3305800594C2C /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
 		9C38E0222BC3314900594C2C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		9C9955732C18B7A100EB9E17 /* Homepage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Homepage.entitlements; sourceTree = "<group>"; };
+		9C9955752C18B85000EB9E17 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		9C9955772C18B9EC00EB9E17 /* URLValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidator.swift; sourceTree = "<group>"; };
 		9CC4B4F42BBEF5B4007BC68B /* Homepage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC4B4F72BBEF5B4007BC68B /* HomepageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageApp.swift; sourceTree = "<group>"; };
 		9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,11 +100,20 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9C9955742C18B83800EB9E17 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C9955752C18B85000EB9E17 /* UserDefaults+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9CC4B4EB2BBEF5B4007BC68B = {
 			isa = PBXGroup;
 			children = (
 				9CC4B4F62BBEF5B4007BC68B /* Homepage */,
 				9CEA5B242BBF3FE500ACF6DC /* HomepageExtension */,
+				9C9955742C18B83800EB9E17 /* Extensions */,
 				9CC4B4F52BBEF5B4007BC68B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,9 +130,11 @@
 		9CC4B4F62BBEF5B4007BC68B /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				9C9955732C18B7A100EB9E17 /* Homepage.entitlements */,
 				9CC4B5052BBEF649007BC68B /* Info.plist */,
 				9CC4B4F72BBEF5B4007BC68B /* HomepageApp.swift */,
 				9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */,
+				9C9955772C18B9EC00EB9E17 /* URLValidator.swift */,
 				9CC4B4FB2BBEF5B5007BC68B /* Assets.xcassets */,
 				9C38E0212BC3313800594C2C /* Resources */,
 				9CC4B4FD2BBEF5B5007BC68B /* Preview Content */,
@@ -170,6 +186,7 @@
 				9CC4B4F12BBEF5B4007BC68B /* Frameworks */,
 				9CC4B4F22BBEF5B4007BC68B /* Resources */,
 				9CC4B5262BBEF69C007BC68B /* Embed Foundation Extensions */,
+				9C9955792C18BD7100EB9E17 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -263,12 +280,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9C9955792C18BD7100EB9E17 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9CC4B4F02BBEF5B4007BC68B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9CC4B4FA2BBEF5B4007BC68B /* ContentView.swift in Sources */,
+				9C9955762C18B85000EB9E17 /* UserDefaults+Extension.swift in Sources */,
+				9C9955782C18B9EC00EB9E17 /* URLValidator.swift in Sources */,
 				9CC4B4F82BBEF5B4007BC68B /* HomepageApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,11 +457,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Homepage/Homepage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Homepage/Preview Content\"";
 				DEVELOPMENT_TEAM = 3W9UA5X43W;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Homepage/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Homepage;
@@ -455,11 +497,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Homepage/Homepage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Homepage/Preview Content\"";
 				DEVELOPMENT_TEAM = 3W9UA5X43W;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Homepage/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Homepage;

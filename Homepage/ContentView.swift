@@ -50,7 +50,7 @@ struct ContentView: View {
         .alert(isPresented: $showSuccessAlert) {
             Alert(
                 title: Text("homepageSaved"),
-                message: Text("setupHelp"), 
+                message: Text("setupHelp"),
                 dismissButton: .default(Text("ok"))
             )
         }

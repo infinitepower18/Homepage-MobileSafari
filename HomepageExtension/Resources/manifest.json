@@ -16,7 +16,7 @@
     "256": "images/icon-256.png",
     "512": "images/icon-512.png"
   },
-  "permissions": ["storage"],
+  "permissions": ["storage", "nativeMessaging"],
   "background": {
     "service_worker": "background.js"
   },

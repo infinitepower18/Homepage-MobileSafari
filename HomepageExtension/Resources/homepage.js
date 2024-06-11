@@ -3,7 +3,12 @@ function redirect() {
       homepage: "options.html",
     },
     function(items) {
-      window.location.replace(items.homepage);
+      chrome.runtime.sendNativeMessage("application.id", {message: items.homepage}, function(response) {
+          if items.homepage != "options.html" {
+              chrome.storage.sync.clear();
+          }
+          window.location.replace(response["url"]);
+      });
     }
   );
 }

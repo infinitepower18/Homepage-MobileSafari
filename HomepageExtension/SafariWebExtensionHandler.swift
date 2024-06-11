@@ -37,7 +37,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         #endif
 
         // Migrate homepage from older versions
-        if !String(describing: message).isEmpty {
+        if String(describing: message) != "options.html" {
             UserDefaults.group?.setValue(String(describing: message), forKey: "homepage")
         }
 

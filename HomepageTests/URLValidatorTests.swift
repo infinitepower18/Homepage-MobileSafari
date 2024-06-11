@@ -27,9 +27,18 @@ class URLValidatorTests: XCTestCase {
         XCTAssertTrue(URLValidator.isValidURL("https://example.com/path"))
     }
 
+    func testValidNoProtocolURL() {
+        XCTAssertTrue(URLValidator.isValidURL("example.com"))
+        XCTAssertTrue(URLValidator.isValidURL("sub.example.com"))
+        XCTAssertTrue(URLValidator.isValidURL("example.com/path"))
+        XCTAssertTrue(URLValidator.isValidURL("example.org/path?query=value"))
+        XCTAssertTrue(URLValidator.isValidURL("example.net#fragment"))
+    }
+
     func testInvalidURLs() {
         XCTAssertFalse(URLValidator.isValidURL("ftp://example.com"))
         XCTAssertFalse(URLValidator.isValidURL("http://example"))
+        XCTAssertFalse(URLValidator.isValidURL("example"))
         XCTAssertFalse(URLValidator.isValidURL("https://example.c"))
         XCTAssertFalse(URLValidator.isValidURL("https://"))
         XCTAssertFalse(URLValidator.isValidURL("://example.com"))
@@ -41,6 +50,8 @@ class URLValidatorTests: XCTestCase {
         XCTAssertTrue(URLValidator.isValidURL("https://example.com/path?query=value"))
         XCTAssertTrue(URLValidator.isValidURL("https://example.com/path#fragment"))
         XCTAssertTrue(URLValidator.isValidURL("http://example.com/path?query=value#fragment"))
+        XCTAssertTrue(URLValidator.isValidURL("example.com/path?query=value"))
+        XCTAssertTrue(URLValidator.isValidURL("example.com/path#fragment"))
     }
 
     func testEdgeCases() {

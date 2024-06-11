@@ -18,7 +18,7 @@ class URLValidator {
         }
 
         // Regular expression for URL validation
-        let urlRegex = #"^(https?:\/\/)(([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,})(\/[^\s]*)?$"#
+        let urlRegex = "^(https?://)?([a-zA-Z0-9\\-]+\\.)+[a-zA-Z]{2,}([/?#][^\\s]*)?$"
 
         // Check if the URL matches the regex
         if urlString.range(of: urlRegex, options: .regularExpression) != nil {

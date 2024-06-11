@@ -20,11 +20,13 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             profile = request?.userInfo?["profile"] as? UUID
         }
 
-        let message: Any?
+        let message: String
         if #available(iOS 17.0, macOS 14.0, *) {
-            message = request?.userInfo?[SFExtensionMessageKey]
+            let info = request?.userInfo?[SFExtensionMessageKey] as? AnyObject
+            message = info?["message"] as? String ?? "options.html"
         } else {
-            message = request?.userInfo?["message"]
+            let info = request?.userInfo?["message"] as? AnyObject
+            message = info?["message"] as? String ?? "options.html"
         }
 
         #if DEBUG

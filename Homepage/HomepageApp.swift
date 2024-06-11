@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct HomepageApp: App {
+
+    init() {
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor.accent
+    }
+
     var body: some Scene {
         WindowGroup {
             GeometryReader { geometry in
@@ -16,6 +21,7 @@ struct HomepageApp: App {
                     ContentView()
                         .frame(width: geometry.size.width)
                         .frame(minHeight: geometry.size.height)
+                        .tint(.accent)
                 }
             }
         }

@@ -27,10 +27,23 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             message = request?.userInfo?["message"]
         }
 
-        os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@ (profile: %@)", String(describing: message), profile?.uuidString ?? "none")
+        #if DEBUG
+        os_log(
+            .default,
+            "Received message from browser.runtime.sendNativeMessage: %@ (profile: %@)",
+            String(describing: message),
+            profile?.uuidString ?? "none"
+        )
+        #endif
+
+        // Migrate homepage from older versions
+        if !String(describing: message).isEmpty {
+            UserDefaults.group?.setValue(String(describing: message), forKey: "homepage")
+        }
 
         let response = NSExtensionItem()
-        response.userInfo = [ SFExtensionMessageKey: [ "echo": message ] ]
+        let url: String = UserDefaults.group?.string(forKey: "homepage") ?? "options.html"
+        response.userInfo = [ SFExtensionMessageKey: [ "url": url ] ]
 
         context.completeRequest(returningItems: [ response ], completionHandler: nil)
     }

@@ -21,7 +21,7 @@ struct ContentView: View {
                     }
                     .padding()
                     .onAppear {
-                        urlInput = UserDefaults.homepage
+                        urlInput = UserDefaults.homepage ?? ""
                     }
                     .alert(isPresented: $showSuccessAlert) {
                         Alert(

@@ -12,9 +12,9 @@ extension UserDefaults {
     static let group = UserDefaults(suiteName: "group.com.ip18.Homepage")
 
     /// The user defined homepage URL
-    static var homepage: String {
+    static var homepage: String? {
         get {
-            UserDefaults.group?.string(forKey: "homepage") ?? ""
+            UserDefaults.group?.string(forKey: "homepage")
         }
         set {
             UserDefaults.group?.set(newValue, forKey: "homepage")

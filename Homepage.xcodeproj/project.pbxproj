@@ -23,7 +23,6 @@
 		9CEA5B3B2BBF3FE500ACF6DC /* HomepageExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9CEA5B232BBF3FE500ACF6DC /* HomepageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9CEA5B442BBF406B00ACF6DC /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 9CEA5B3F2BBF406A00ACF6DC /* background.js */; };
 		9CEA5B452BBF406B00ACF6DC /* homepage.html in Resources */ = {isa = PBXBuildFile; fileRef = 9CEA5B402BBF406A00ACF6DC /* homepage.html */; };
-		9CEA5B462BBF406B00ACF6DC /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = 9CEA5B412BBF406A00ACF6DC /* options.js */; };
 		9CEA5B472BBF406B00ACF6DC /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 9CEA5B422BBF406A00ACF6DC /* options.html */; };
 		9CEA5B482BBF406B00ACF6DC /* homepage.js in Resources */ = {isa = PBXBuildFile; fileRef = 9CEA5B432BBF406A00ACF6DC /* homepage.js */; };
 /* End PBXBuildFile section */
@@ -81,7 +80,6 @@
 		9CEA5B382BBF3FE500ACF6DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CEA5B3F2BBF406A00ACF6DC /* background.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		9CEA5B402BBF406A00ACF6DC /* homepage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = homepage.html; sourceTree = "<group>"; };
-		9CEA5B412BBF406A00ACF6DC /* options.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = options.js; sourceTree = "<group>"; };
 		9CEA5B422BBF406A00ACF6DC /* options.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = options.html; sourceTree = "<group>"; };
 		9CEA5B432BBF406A00ACF6DC /* homepage.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = homepage.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,7 +198,6 @@
 				9CEA5B402BBF406A00ACF6DC /* homepage.html */,
 				9CEA5B432BBF406A00ACF6DC /* homepage.js */,
 				9CEA5B422BBF406A00ACF6DC /* options.html */,
-				9CEA5B412BBF406A00ACF6DC /* options.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -333,7 +330,6 @@
 				9CEA5B452BBF406B00ACF6DC /* homepage.html in Resources */,
 				9CEA5B2D2BBF3FE500ACF6DC /* manifest.json in Resources */,
 				9CEA5B482BBF406B00ACF6DC /* homepage.js in Resources */,
-				9CEA5B462BBF406B00ACF6DC /* options.js in Resources */,
 				9CEA5B472BBF406B00ACF6DC /* options.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

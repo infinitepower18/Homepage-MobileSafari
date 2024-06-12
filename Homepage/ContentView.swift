@@ -12,41 +12,59 @@ struct ContentView: View {
     @State private var urlInput = ""
     @State private var showSuccessAlert = false
 
+    @MainActor private var isPhone: Bool {
+        UIDevice.current.userInterfaceIdiom == .phone
+    }
+
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
                 ScrollView(.vertical) {
-                    VStack(spacing: 20) {
-                        subViews
-                    }
-                    .padding()
-                    .onAppear {
-                        urlInput = UserDefaults.homepage ?? ""
-                    }
-                    .alert(isPresented: $showSuccessAlert) {
-                        Alert(
-                            title: Text("homepageSaved"),
-                            message: Text("homepageSavedDescription"),
-                            dismissButton: .default(Text("ok"))
-                        )
-                    }
-                    .toolbar {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button {
-                                if let url = URL(string: "https://github.com/infinitepower18/Homepage-MobileSafari") {
-                                    UIApplication.shared.open(url)
-                                }
-                            } label: {
-                                Text("viewRepo")
-                            }
+                    if isPhone {
+                        stack
+                            .frame(width: geometry.size.width)
+                            .frame(minHeight: geometry.size.height)
+                    } else {
+                        HStack {
+                            Spacer()
+                            stack
+                                .frame(width: geometry.size.width / 2)
+                                .frame(minHeight: geometry.size.height)
+                            Spacer()
                         }
                     }
-                    .frame(width: geometry.size.width)
-                    .frame(minHeight: geometry.size.height)
                 }
             }
         }
         .navigationViewStyle(.stack)
+    }
+
+    @MainActor private var stack: some View {
+        VStack(spacing: 20) {
+            subViews
+        }
+        .padding()
+        .onAppear {
+            urlInput = UserDefaults.homepage ?? ""
+        }
+        .alert(isPresented: $showSuccessAlert) {
+            Alert(
+                title: Text("homepageSaved"),
+                message: Text("homepageSavedDescription"),
+                dismissButton: .default(Text("ok"))
+            )
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    if let url = URL(string: "https://github.com/infinitepower18/Homepage-MobileSafari") {
+                        UIApplication.shared.open(url)
+                    }
+                } label: {
+                    Text("viewRepo")
+                }
+            }
+        }
     }
 
     private var subViews: some View {

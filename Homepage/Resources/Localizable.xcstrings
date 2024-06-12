@@ -12,6 +12,17 @@
         }
       }
     },
+    "homepageSavedDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your homepage has been successfully saved."
+          }
+        }
+      }
+    },
     "ok" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -40,7 +51,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To load your homepage whenever a new tab is opened, ensure this app is set under Open New Tabs in Safari Settings."
+            "value" : "To load your homepage whenever a new tab is opened, ensure the extension is enabled and that this app is set under Open New Tabs in Safari Settings."
           }
         }
       }
@@ -62,7 +73,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "URL"
+            "value" : "Homepage URL"
           }
         }
       }
@@ -73,7 +84,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "View on GitHub"
+            "value" : "GitHub"
           }
         }
       }

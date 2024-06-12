@@ -13,11 +13,49 @@ struct ContentView: View {
     @State private var showSuccessAlert = false
 
     var body: some View {
-        VStack(spacing: 20) {
-            Image(uiImage: UIImage(named: "AppIcon")!)
-                .resizable()
-                .frame(width: 64, height: 64)
-                .cornerRadius(10)
+        NavigationView {
+            GeometryReader { geometry in
+                ScrollView(.vertical) {
+                    VStack(spacing: 20) {
+                        subViews
+                    }
+                    .padding()
+                    .onAppear {
+                        urlInput = UserDefaults.homepage
+                    }
+                    .alert(isPresented: $showSuccessAlert) {
+                        Alert(
+                            title: Text("homepageSaved"),
+                            message: Text("homepageSavedDescription"),
+                            dismissButton: .default(Text("ok"))
+                        )
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Button {
+                                if let url = URL(string: "https://github.com/infinitepower18/Homepage-MobileSafari") {
+                                    UIApplication.shared.open(url)
+                                }
+                            } label: {
+                                Text("viewRepo")
+                            }
+                        }
+                    }
+                    .frame(width: geometry.size.width)
+                    .frame(minHeight: geometry.size.height)
+                }
+            }
+        }
+    }
+
+    private var subViews: some View {
+        Group {
+            if let icon = UIImage(named: "AppIcon") {
+                Image(uiImage: icon)
+                    .resizable()
+                    .frame(width: 64, height: 64)
+                    .cornerRadius(10)
+            }
             Text("title")
                 .font(.title)
             TextField(
@@ -29,30 +67,16 @@ struct ContentView: View {
             .textInputAutocapitalization(.never)
             .textFieldStyle(.roundedBorder)
             Button {
-                UserDefaults.group?.set(urlInput, forKey: "homepage")
-                showSuccessAlert = true
+                UserDefaults.homepage = urlInput
+                if UserDefaults.homepage == urlInput {
+                    showSuccessAlert = true
+                }
             } label: {
                 Text("save")
                     .font(.title)
             }
             .disabled(!URLValidator.isValidURL(urlInput))
-            Button {
-                let url = URL(string: "https://github.com/infinitepower18/Homepage-MobileSafari")
-                UIApplication.shared.open(url!)
-            } label: {
-                Text("viewRepo")
-            }
-        }
-        .padding()
-        .onAppear {
-            urlInput = UserDefaults.group?.string(forKey: "homepage") ?? ""
-        }
-        .alert(isPresented: $showSuccessAlert) {
-            Alert(
-                title: Text("homepageSaved"),
-                message: Text("setupHelp"),
-                dismissButton: .default(Text("ok"))
-            )
+            Text("setupHelp")
         }
     }
 }

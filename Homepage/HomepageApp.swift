@@ -16,14 +16,8 @@ struct HomepageApp: App {
 
     var body: some Scene {
         WindowGroup {
-            GeometryReader { geometry in
-                ScrollView(.vertical) {
-                    ContentView()
-                        .frame(width: geometry.size.width)
-                        .frame(minHeight: geometry.size.height)
-                        .tint(.accent)
-                }
-            }
+            ContentView()
+                .tint(.accent)
         }
     }
 }

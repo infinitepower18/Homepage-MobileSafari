@@ -39,12 +39,12 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         #endif
 
         // Migrate homepage from older versions
-        if UserDefaults.group?.string(forKey: "homepage") == nil && String(describing: message) != "options.html" {
-            UserDefaults.group?.setValue(String(describing: message), forKey: "homepage")
+        if UserDefaults.homepage == nil && String(describing: message) != "options.html" {
+            UserDefaults.homepage = String(describing: message)
         }
 
         let response = NSExtensionItem()
-        let url: String = UserDefaults.group?.string(forKey: "homepage") ?? "options.html"
+        let url: String = UserDefaults.homepage ?? "options.html"
         response.userInfo = [ SFExtensionMessageKey: [ "url": url ] ]
 
         context.completeRequest(returningItems: [ response ], completionHandler: nil)

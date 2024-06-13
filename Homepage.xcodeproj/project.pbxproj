@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -86,6 +86,27 @@
 		9CEA5B432BBF406A00ACF6DC /* homepage.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = homepage.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9CC4DA7A2C1BB03000D7EA5A /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PrivacyInfo.xcprivacy,
+			);
+			target = 9CC4B4F32BBEF5B4007BC68B /* Homepage */;
+		};
+		9CC4DA7B2C1BB03000D7EA5A /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PrivacyInfo.xcprivacy,
+			);
+			target = 9CEA5B222BBF3FE500ACF6DC /* HomepageExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9CC4DA762C1BB00100D7EA5A /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (9CC4DA7A2C1BB03000D7EA5A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 9CC4DA7B2C1BB03000D7EA5A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		9C99557B2C18C02100EB9E17 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -140,6 +161,7 @@
 			children = (
 				9CC4B4F62BBEF5B4007BC68B /* Homepage */,
 				9CEA5B242BBF3FE500ACF6DC /* HomepageExtension */,
+				9CC4DA762C1BB00100D7EA5A /* Resources */,
 				9C9955742C18B83800EB9E17 /* Extensions */,
 				9C99557F2C18C02100EB9E17 /* HomepageTests */,
 				9CC4B4F52BBEF5B4007BC68B /* Products */,

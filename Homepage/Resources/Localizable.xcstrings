@@ -1,6 +1,17 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        }
+      }
+    },
     "homepageSaved" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -18,7 +29,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Your homepage has been successfully saved."
+            "value" : "Your homepage has been saved."
           }
         }
       }
@@ -74,6 +85,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Homepage URL"
+          }
+        }
+      }
+    },
+    "validationError" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter a valid URL starting with http:// or https://, or about:blank for a blank page"
           }
         }
       }

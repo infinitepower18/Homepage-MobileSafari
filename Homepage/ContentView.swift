@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
 
     @State private var urlInput = ""
-    @State private var showSuccessAlert = false
+    @State private var showAlert = false
+    @State private var alertType: AlertType = .failed
 
     @MainActor private var isPhone: Bool {
         UIDevice.current.userInterfaceIdiom == .phone
@@ -47,12 +48,21 @@ struct ContentView: View {
         .onAppear {
             urlInput = UserDefaults.homepage ?? ""
         }
-        .alert(isPresented: $showSuccessAlert) {
-            Alert(
-                title: Text("homepageSaved"),
-                message: Text("homepageSavedDescription"),
-                dismissButton: .default(Text("ok"))
-            )
+        .alert(isPresented: $showAlert) {
+            switch alertType {
+            case .success:
+                Alert(
+                    title: Text("homepageSaved"),
+                    message: Text("homepageSavedDescription"),
+                    dismissButton: .default(Text("ok"))
+                )
+            case .failed:
+                Alert(
+                    title: Text("error"),
+                    message: Text("validationError"),
+                    dismissButton: .default(Text("ok"))
+                )
+            }
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -86,15 +96,19 @@ struct ContentView: View {
             .textInputAutocapitalization(.never)
             .textFieldStyle(.roundedBorder)
             Button {
-                UserDefaults.homepage = urlInput
-                if UserDefaults.homepage == urlInput {
-                    showSuccessAlert = true
+                guard URLValidator.isValidURL(urlInput) else {
+                    alertType = .failed
+                    showAlert = true
+                    return
                 }
+                UserDefaults.homepage = urlInput
+                alertType = .success
+                showAlert = true
             } label: {
                 Text("save")
                     .font(.title)
             }
-            .disabled(!URLValidator.isValidURL(urlInput))
+            .disabled(urlInput.trimmingCharacters(in: .whitespaces).isEmpty)
             Text("setupHelp")
         }
     }

@@ -10,6 +10,7 @@
 		9C175F402C18E0DA00A577C7 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9955752C18B85000EB9E17 /* UserDefaults+Extension.swift */; };
 		9C38E0202BC3305800594C2C /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 9C38E01F2BC3305800594C2C /* _locales */; };
 		9C38E0232BC3314900594C2C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9C38E0222BC3314900594C2C /* Localizable.xcstrings */; };
+		9C9674F12C1B8CB200F4E75C /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9674F02C1B8CB200F4E75C /* AlertType.swift */; };
 		9C9955762C18B85000EB9E17 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9955752C18B85000EB9E17 /* UserDefaults+Extension.swift */; };
 		9C9955782C18B9EC00EB9E17 /* URLValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9955772C18B9EC00EB9E17 /* URLValidator.swift */; };
 		9C9955812C18C02100EB9E17 /* URLValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9955802C18C02100EB9E17 /* URLValidatorTests.swift */; };
@@ -62,6 +63,7 @@
 		9C175F3F2C18E03C00A577C7 /* HomepageExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HomepageExtension.entitlements; sourceTree = "<group>"; };
 		9C38E01F2BC3305800594C2C /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
 		9C38E0222BC3314900594C2C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		9C9674F02C1B8CB200F4E75C /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
 		9C9955732C18B7A100EB9E17 /* Homepage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Homepage.entitlements; sourceTree = "<group>"; };
 		9C9955752C18B85000EB9E17 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		9C9955772C18B9EC00EB9E17 /* URLValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidator.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				9CC4B5052BBEF649007BC68B /* Info.plist */,
 				9CC4B4F72BBEF5B4007BC68B /* HomepageApp.swift */,
 				9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */,
+				9C9674F02C1B8CB200F4E75C /* AlertType.swift */,
 				9C9955772C18B9EC00EB9E17 /* URLValidator.swift */,
 				9CC4B4FB2BBEF5B5007BC68B /* Assets.xcassets */,
 				9C38E0212BC3313800594C2C /* Resources */,
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CC4B4FA2BBEF5B4007BC68B /* ContentView.swift in Sources */,
+				9C9674F12C1B8CB200F4E75C /* AlertType.swift in Sources */,
 				9C9955762C18B85000EB9E17 /* UserDefaults+Extension.swift in Sources */,
 				9C9955782C18B9EC00EB9E17 /* URLValidator.swift in Sources */,
 				9CC4B4F82BBEF5B4007BC68B /* HomepageApp.swift in Sources */,

@@ -12,6 +12,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 
     func beginRequest(with context: NSExtensionContext) {
         let request = context.inputItems.first as? NSExtensionItem
+        let defaultPage = "options.html"
 
         let profile: UUID?
         if #available(iOS 17.0, macOS 14.0, *) {
@@ -20,17 +21,34 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             profile = request?.userInfo?["profile"] as? UUID
         }
 
-        let message: Any?
+        let message: String
         if #available(iOS 17.0, macOS 14.0, *) {
-            message = request?.userInfo?[SFExtensionMessageKey]
+            let info = request?.userInfo?[SFExtensionMessageKey] as? AnyObject
+            message = info?["message"] as? String ?? defaultPage
         } else {
-            message = request?.userInfo?["message"]
+            let info = request?.userInfo?["message"] as? AnyObject
+            message = info?["message"] as? String ?? defaultPage
         }
 
-        os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@ (profile: %@)", String(describing: message), profile?.uuidString ?? "none")
+        let describedMessage = String(describing: message)
+
+        #if DEBUG
+        os_log(
+            .default,
+            "Received message from browser.runtime.sendNativeMessage: %@ (profile: %@)",
+            describedMessage,
+            profile?.uuidString ?? "none"
+        )
+        #endif
+
+        // Migrate homepage from older versions
+        if UserDefaults.homepage == nil && describedMessage != defaultPage {
+            UserDefaults.homepage = describedMessage
+        }
 
         let response = NSExtensionItem()
-        response.userInfo = [ SFExtensionMessageKey: [ "echo": message ] ]
+        let url: String = UserDefaults.homepage ?? defaultPage
+        response.userInfo = [ SFExtensionMessageKey: [ "url": url ] ]
 
         context.completeRequest(returningItems: [ response ], completionHandler: nil)
     }

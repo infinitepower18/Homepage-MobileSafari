@@ -4,7 +4,7 @@
   "chrome_url_overrides": {
     "newtab": "homepage.html"
   },
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "__MSG_extension_description__",
   "options_ui": {
     "page": "options.html"
@@ -16,7 +16,7 @@
     "256": "images/icon-256.png",
     "512": "images/icon-512.png"
   },
-  "permissions": ["storage"],
+  "permissions": ["storage", "nativeMessaging"],
   "background": {
     "service_worker": "background.js"
   },

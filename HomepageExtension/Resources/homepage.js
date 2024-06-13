@@ -10,6 +10,7 @@ function redirect() {
 
       // Check if response contains the expected "url" key
       if (response && response.url) {
+        // Clear once migrated to UserDefaults
         if (items.homepage != "options.html") {
           chrome.storage.sync.clear();
         }

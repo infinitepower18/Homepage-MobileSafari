@@ -9,10 +9,10 @@ import Foundation
 
 extension UserDefaults {
     /// The app group to use for UserDefaults
-    static let group = UserDefaults(suiteName: "group.com.ip18.Homepage")
+    @MainActor static let group = UserDefaults(suiteName: "group.com.ip18.Homepage")
 
     /// The user defined homepage URL
-    static var homepage: String? {
+    @MainActor static var homepage: String? {
         get {
             UserDefaults.group?.string(forKey: "homepage")
         }

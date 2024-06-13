@@ -6,13 +6,7 @@ With this extension, you can set any URL and Safari will automatically load your
 
 Unlike macOS, Safari on iOS and visionOS doesn't have the ability to set a homepage, so this extension was created to solve this.
 
-To set up, enable the extension and ensure it is set as the new tab page. To set the homepage URL of your choice:
-
-1. Open your device's settings app
-
-2. Select the Safari app followed by Extensions
-
-3. Select the extension and tap Settings
+To load your homepage whenever a new tab is opened, ensure the extension is enabled and that this app is set under Open New Tabs in Safari Settings.
 
 ## Download
 

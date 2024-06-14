@@ -12,6 +12,8 @@ To load your homepage whenever a new tab is opened, ensure the extension is enab
 
 [![image](https://ahnafmahmud.com/files/badges/AppStore.svg)](https://apps.apple.com/app/homepage-for-safari/id6481118559)
 
+[TestFlight](https://testflight.apple.com/join/y7e92WCb)
+
 Available for iOS and visionOS.
 
 [Privacy Policy](https://ahnafmahmud.com/apps/Homepage/PrivacyPolicy.html)

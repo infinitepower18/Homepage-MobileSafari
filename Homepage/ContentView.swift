@@ -79,7 +79,7 @@ struct ContentView: View {
 
     private var subViews: some View {
         Group {
-            if let icon = UIImage(named: "AppIcon") {
+            if let iconFileName = Bundle.iconFileName, let icon = UIImage(named: iconFileName) {
                 Image(uiImage: icon)
                     .resizable()
                     .frame(width: 64, height: 64)

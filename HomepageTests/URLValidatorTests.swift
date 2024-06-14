@@ -5,57 +5,57 @@
 //  Created by Ahnaf Mahmud on 11/06/2024.
 //
 
-import XCTest
+import Testing
 @testable import Homepage
 
-class URLValidatorTests: XCTestCase {
-    func testAboutBlank() {
-        XCTAssertTrue(URLValidator.isValidURL("about:blank"))
+struct URLValidatorTests {
+    @Test func aboutBlank() {
+        #expect(URLValidator.isValidURL("about:blank"))
     }
 
-    func testValidHTTPURL() {
-        XCTAssertTrue(URLValidator.isValidURL("http://example.com"))
-        XCTAssertTrue(URLValidator.isValidURL("http://example.org"))
-        XCTAssertTrue(URLValidator.isValidURL("http://sub.example.com"))
-        XCTAssertTrue(URLValidator.isValidURL("http://example.com/path"))
+    @Test func validHTTPURL() {
+        #expect(URLValidator.isValidURL("http://example.com"))
+        #expect(URLValidator.isValidURL("http://example.org"))
+        #expect(URLValidator.isValidURL("http://sub.example.com"))
+        #expect(URLValidator.isValidURL("http://example.com/path"))
     }
 
-    func testValidHTTPSURL() {
-        XCTAssertTrue(URLValidator.isValidURL("https://example.com"))
-        XCTAssertTrue(URLValidator.isValidURL("https://example.org"))
-        XCTAssertTrue(URLValidator.isValidURL("https://sub.example.com"))
-        XCTAssertTrue(URLValidator.isValidURL("https://example.com/path"))
+    @Test func validHTTPSURL() {
+        #expect(URLValidator.isValidURL("https://example.com"))
+        #expect(URLValidator.isValidURL("https://example.org"))
+        #expect(URLValidator.isValidURL("https://sub.example.com"))
+        #expect(URLValidator.isValidURL("https://example.com/path"))
     }
 
-    func testInvalidNoProtocolURL() {
-        XCTAssertFalse(URLValidator.isValidURL("example.com"))
-        XCTAssertFalse(URLValidator.isValidURL("sub.example.com"))
-        XCTAssertFalse(URLValidator.isValidURL("example.com/path"))
-        XCTAssertFalse(URLValidator.isValidURL("example.org/path?query=value"))
-        XCTAssertFalse(URLValidator.isValidURL("example.net#fragment"))
+    @Test func invalidNoProtocolURL() {
+        #expect(!URLValidator.isValidURL("example.com"))
+        #expect(!URLValidator.isValidURL("sub.example.com"))
+        #expect(!URLValidator.isValidURL("example.com/path"))
+        #expect(!URLValidator.isValidURL("example.org/path?query=value"))
+        #expect(!URLValidator.isValidURL("example.net#fragment"))
     }
 
-    func testInvalidURLs() {
-        XCTAssertFalse(URLValidator.isValidURL("ftp://example.com"))
-        XCTAssertFalse(URLValidator.isValidURL("http://example"))
-        XCTAssertFalse(URLValidator.isValidURL("example"))
-        XCTAssertFalse(URLValidator.isValidURL("https://example.c"))
-        XCTAssertFalse(URLValidator.isValidURL("https://"))
-        XCTAssertFalse(URLValidator.isValidURL("://example.com"))
-        XCTAssertFalse(URLValidator.isValidURL("http:/example.com"))
-        XCTAssertFalse(URLValidator.isValidURL("https:example.com"))
+    @Test func invalidURLs() {
+        #expect(!URLValidator.isValidURL("ftp://example.com"))
+        #expect(!URLValidator.isValidURL("http://example"))
+        #expect(!URLValidator.isValidURL("example"))
+        #expect(!URLValidator.isValidURL("https://example.c"))
+        #expect(!URLValidator.isValidURL("https://"))
+        #expect(!URLValidator.isValidURL("://example.com"))
+        #expect(!URLValidator.isValidURL("http:/example.com"))
+        #expect(!URLValidator.isValidURL("https:example.com"))
     }
 
-    func testValidURLsWithQueryAndFragment() {
-        XCTAssertTrue(URLValidator.isValidURL("https://example.com/path?query=value"))
-        XCTAssertTrue(URLValidator.isValidURL("https://example.com/path#fragment"))
-        XCTAssertTrue(URLValidator.isValidURL("http://example.com/path?query=value#fragment"))
+    @Test func validURLsWithQueryAndFragment() {
+        #expect(URLValidator.isValidURL("https://example.com/path?query=value"))
+        #expect(URLValidator.isValidURL("https://example.com/path#fragment"))
+        #expect(URLValidator.isValidURL("http://example.com/path?query=value#fragment"))
     }
 
-    func testEdgeCases() {
-        XCTAssertFalse(URLValidator.isValidURL(""))
-        XCTAssertFalse(URLValidator.isValidURL(" "))
-        XCTAssertFalse(URLValidator.isValidURL("http://.com"))
-        XCTAssertFalse(URLValidator.isValidURL("http://example."))
+    @Test func edgeCases() {
+        #expect(!URLValidator.isValidURL(""))
+        #expect(!URLValidator.isValidURL(" "))
+        #expect(!URLValidator.isValidURL("http://.com"))
+        #expect(!URLValidator.isValidURL("http://example."))
     }
 }

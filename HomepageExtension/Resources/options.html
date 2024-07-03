@@ -38,7 +38,7 @@
       color-scheme: dark;
     }
   }
-  button {
+  .deeplink {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -46,6 +46,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    text-decoration: none;
   }
   
   input[type="url"] {
@@ -64,6 +65,8 @@
 <body>
  <div class="container">
   <div> To set the homepage of your choice, open the Homepage app. </div>
+  <br/>
+  <div> <a href="homepage://" class="deeplink">Open app</a> </div>
  </div>
 </body>
 

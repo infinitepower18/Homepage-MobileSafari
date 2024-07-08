@@ -19,3 +19,8 @@ Available for iOS and visionOS.
 [Privacy Policy](https://ahnafmahmud.com/apps/Homepage/PrivacyPolicy.html)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F1K06VY)
+
+## Known Issues
+
+### Blank page when opening a new tab in iOS 18
+Apple has confirmed it's an iOS 18 bug and that they're working on a fix for a future iOS update. (FB14194963)

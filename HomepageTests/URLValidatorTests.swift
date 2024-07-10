@@ -27,6 +27,13 @@ struct URLValidatorTests {
         #expect(URLValidator.isValidURL("https://example.com/path"))
     }
 
+    @Test func validURLsWithPort() {
+        #expect(URLValidator.isValidURL("http://example.com:80"))
+        #expect(URLValidator.isValidURL("https://example.com:443"))
+        #expect(URLValidator.isValidURL("http://sub.example.com:8080"))
+        #expect(URLValidator.isValidURL("https://example.org:1234/path"))
+    }
+
     @Test func invalidNoProtocolURL() {
         #expect(!URLValidator.isValidURL("example.com"))
         #expect(!URLValidator.isValidURL("sub.example.com"))
@@ -44,6 +51,13 @@ struct URLValidatorTests {
         #expect(!URLValidator.isValidURL("://example.com"))
         #expect(!URLValidator.isValidURL("http:/example.com"))
         #expect(!URLValidator.isValidURL("https:example.com"))
+    }
+
+    @Test func invalidURLsWithPort() {
+        #expect(!URLValidator.isValidURL("http://example.com:"))
+        #expect(!URLValidator.isValidURL("http://example.com:port"))
+        #expect(!URLValidator.isValidURL("http://example.com:999999"))
+        #expect(!URLValidator.isValidURL("http://example.com:-80"))
     }
 
     @Test func validURLsWithQueryAndFragment() {

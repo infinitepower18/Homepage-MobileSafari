@@ -31,4 +31,4 @@ The locale file is located in `Homepage/Resources/Localizable.xcstrings`. If you
 
 If you are editing with Xcode, make sure you are using the latest version of Xcode 16.
 
-Future updates to strings will involve updating all translated language files using Google Translate or some other machine translation service. As you may know, these services are not always accurate, so if you see any inaccuracies, please make a pull request!
+Future updates to strings will involve updating all languages using Google Translate or some other machine translation service. As you may know, these services are not always accurate, so if you see any inaccuracies, please make a pull request!

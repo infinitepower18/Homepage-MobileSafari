@@ -29,6 +29,8 @@ Apple has confirmed it's an iOS 18/visionOS 2 bug and that they're working on a 
 
 Community translations are welcome. The locale file is located in `Homepage/Resources/Localizable.xcstrings`. If your language isn't yet supported, it will fallback to English.
 
+The default page when no homepage is set has its own locale file, which can be found in `HomepageExtension/Resources/translations.json`.
+
 If you are editing with Xcode, make sure you are using the latest version of Xcode 16.
 
 Future updates to strings will involve updating all languages using Google Translate or some other machine translation service. As you may know, these services are not always accurate, so if you see any inaccuracies, please make a pull request!

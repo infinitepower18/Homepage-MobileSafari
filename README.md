@@ -22,5 +22,13 @@ Available for iOS and visionOS.
 
 ## Known Issues
 
-### Blank page when opening a new tab in iOS 18
-Apple has confirmed it's an iOS 18 bug and that they're working on a fix for a future iOS update. (FB14194963)
+### Blank page when opening a new tab in iOS 18/visionOS 2
+Apple has confirmed it's an iOS 18/visionOS 2 bug and that they're working on a fix for a future update. (FB14194963)
+
+## Translations
+
+The locale file is located in `Homepage/Resources/Localizable.xcstrings`. If your language isn't yet supported, it will fallback to English.
+
+If you are editing with Xcode, make sure you are using the latest version of Xcode 16.
+
+Future updates to strings will involve updating all translated language files using Google Translate or some other machine translation service. As you may know, these services are not always accurate, so if you see any inaccuracies, please make a pull request!

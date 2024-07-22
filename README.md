@@ -27,7 +27,7 @@ Apple has confirmed it's an iOS 18/visionOS 2 bug and that they're working on a 
 
 ## Translations
 
-The locale file is located in `Homepage/Resources/Localizable.xcstrings`. If your language isn't yet supported, it will fallback to English.
+Community translations are welcome. The locale file is located in `Homepage/Resources/Localizable.xcstrings`. If your language isn't yet supported, it will fallback to English.
 
 If you are editing with Xcode, make sure you are using the latest version of Xcode 16.
 

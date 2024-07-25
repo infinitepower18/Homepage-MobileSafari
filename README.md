@@ -23,7 +23,7 @@ Available for iOS and visionOS.
 ## Known Issues
 
 ### Blank page when opening a new tab in iOS 18/visionOS 2
-Apple has confirmed it's an iOS 18/visionOS 2 bug and that they're working on a fix for a future update. (FB14194963)
+This issue should be solved in iOS 18/visionOS 2 beta 4, please update to the latest version. If you continue to face issues, please report on GitHub. (FB14194963)
 
 ## Translations
 

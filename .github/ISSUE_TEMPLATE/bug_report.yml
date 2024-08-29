@@ -28,7 +28,7 @@ body:
     id: configuration
     attributes:
       label: Extension configuration
-      description: Please check that the extension is enabled and that it is set under Open New Tabs in Safari Settings.
+      description: Please check that the extension is enabled and it is set under Open New Tabs in Safari Settings.
       options:
         - label: The extension is configured correctly
           required: true

@@ -24,6 +24,14 @@ body:
       description: A clear and concise description of what you expected to happen.
     validations:
       required: true
+  - type: checkboxes
+    id: configuration
+    attributes:
+      label: Extension configuration
+      description: Please check that the extension is enabled and that it is set under Open New Tabs in Safari Settings.
+      options:
+        - label: The extension is configured correctly
+          required: true
   - type: dropdown
     id: device
     attributes:

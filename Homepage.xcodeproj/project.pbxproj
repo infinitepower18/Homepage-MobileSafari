@@ -12,6 +12,8 @@
 		9C38E0232BC3314900594C2C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9C38E0222BC3314900594C2C /* Localizable.xcstrings */; };
 		9C54AD392C1D0FC6000C368D /* BundleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54AD382C1D0FC6000C368D /* BundleExtensionTests.swift */; };
 		9C6C85BD2C1D0E9E00FD5951 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6C85BC2C1D0E9E00FD5951 /* Bundle+Extension.swift */; };
+		9C7BC95A2C811C58004E8F75 /* SetHomepageIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7BC9592C811C58004E8F75 /* SetHomepageIntent.swift */; };
+		9C7BC95C2C811F46004E8F75 /* ShortcutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7BC95B2C811F46004E8F75 /* ShortcutsProvider.swift */; };
 		9C90E9882C4EF60C0032ADD3 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C90E9872C4EF60C0032ADD3 /* styles.css */; };
 		9C90E98A2C4EF7CD0032ADD3 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90E9892C4EF7CD0032ADD3 /* translations.json */; };
 		9C90E98C2C4EF8180032ADD3 /* localize.js in Resources */ = {isa = PBXBuildFile; fileRef = 9C90E98B2C4EF8180032ADD3 /* localize.js */; };
@@ -72,6 +74,8 @@
 		9C38E0222BC3314900594C2C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		9C54AD382C1D0FC6000C368D /* BundleExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensionTests.swift; sourceTree = "<group>"; };
 		9C6C85BC2C1D0E9E00FD5951 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		9C7BC9592C811C58004E8F75 /* SetHomepageIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHomepageIntent.swift; sourceTree = "<group>"; };
+		9C7BC95B2C811F46004E8F75 /* ShortcutsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsProvider.swift; sourceTree = "<group>"; };
 		9C90E9872C4EF60C0032ADD3 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		9C90E9892C4EF7CD0032ADD3 /* translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
 		9C90E98B2C4EF8180032ADD3 /* localize.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = localize.js; sourceTree = "<group>"; };
@@ -140,6 +144,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9C7BC9582C811C40004E8F75 /* App Intents */ = {
+			isa = PBXGroup;
+			children = (
+				9C7BC9592C811C58004E8F75 /* SetHomepageIntent.swift */,
+			);
+			path = "App Intents";
+			sourceTree = "<group>";
+		};
 		9C9955742C18B83800EB9E17 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,11 +196,13 @@
 			children = (
 				9C9955732C18B7A100EB9E17 /* Homepage.entitlements */,
 				9CC4B5052BBEF649007BC68B /* Info.plist */,
+				9C7BC9582C811C40004E8F75 /* App Intents */,
+				9C6C85BB2C1D0E8D00FD5951 /* Extensions */,
 				9CC4B4F72BBEF5B4007BC68B /* HomepageApp.swift */,
 				9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */,
 				9C9674F02C1B8CB200F4E75C /* AlertType.swift */,
 				9C9955772C18B9EC00EB9E17 /* URLValidator.swift */,
-				9C6C85BB2C1D0E8D00FD5951 /* Extensions */,
+				9C7BC95B2C811F46004E8F75 /* ShortcutsProvider.swift */,
 				9CC4B4FB2BBEF5B5007BC68B /* Assets.xcassets */,
 				9C38E0212BC3313800594C2C /* Resources */,
 				9CC4B4FD2BBEF5B5007BC68B /* Preview Content */,
@@ -417,7 +431,9 @@
 			files = (
 				9CC4B4FA2BBEF5B4007BC68B /* ContentView.swift in Sources */,
 				9C6C85BD2C1D0E9E00FD5951 /* Bundle+Extension.swift in Sources */,
+				9C7BC95A2C811C58004E8F75 /* SetHomepageIntent.swift in Sources */,
 				9C9674F12C1B8CB200F4E75C /* AlertType.swift in Sources */,
+				9C7BC95C2C811F46004E8F75 /* ShortcutsProvider.swift in Sources */,
 				9C9955762C18B85000EB9E17 /* UserDefaults+Extension.swift in Sources */,
 				9C9955782C18B9EC00EB9E17 /* URLValidator.swift in Sources */,
 				9CC4B4F82BBEF5B4007BC68B /* HomepageApp.swift in Sources */,
@@ -619,7 +635,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Homepage/Homepage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_ASSET_PATHS = "\"Homepage/Preview Content\"";
 				DEVELOPMENT_TEAM = 3W9UA5X43W;
 				ENABLE_PREVIEWS = YES;
@@ -659,7 +675,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Homepage/Homepage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_ASSET_PATHS = "\"Homepage/Preview Content\"";
 				DEVELOPMENT_TEAM = 3W9UA5X43W;
 				ENABLE_PREVIEWS = YES;

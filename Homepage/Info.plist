@@ -26,5 +26,25 @@
 	</dict>
 	<key>UIPreferredDefaultInterfaceOrientation</key>
 	<string>UIInterfaceOrientationLandscapeLeft</string>
+    <key>CFBundleIcons</key>
+    <dict>
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+            <key>NSAppIconComplementingColorNames</key>
+            <array>
+                <string>AccentColor</string>
+            </array>
+        </dict>
+    </dict>
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+            <key>NSAppIconComplementingColorNames</key>
+            <array>
+                <string>AccentColor</string>
+            </array>
+        </dict>
+    </dict>
 </dict>
 </plist>

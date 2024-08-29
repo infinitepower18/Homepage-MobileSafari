@@ -56,6 +56,28 @@
         }
       }
     },
+    "setHomepage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set Homepage"
+          }
+        }
+      }
+    },
+    "setNewHomepage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set a new homepage"
+          }
+        }
+      }
+    },
     "setupHelp" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -20,11 +20,6 @@ Available for iOS and visionOS.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F1K06VY)
 
-## Known Issues
-
-### Blank page when opening a new tab in iOS 18/visionOS 2
-This issue should be solved in iOS 18/visionOS 2 beta 4, please update to the latest version. If you continue to face issues, please report on GitHub. (FB14194963)
-
 ## Translations
 
 Community translations are welcome. The locale file is located in `Homepage/Resources/Localizable.xcstrings`. If your language isn't yet supported, it will fallback to English.

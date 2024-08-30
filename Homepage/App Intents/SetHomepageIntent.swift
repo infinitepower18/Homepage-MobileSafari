@@ -15,12 +15,13 @@ struct SetHomepageIntent: AppIntent {
     static let description: LocalizedStringResource = "setNewHomepage"
 
     @Parameter(title: "url")
-    var homepageURL: String
+    var homepageURL: URL
 
     func perform() async throws -> some IntentResult & ProvidesDialog {
-        if URLValidator.isValidURL(homepageURL) {
-            UserDefaults.homepage = homepageURL
-            return .result(dialog: IntentDialog("homepageSaved"))
+        let urlString = homepageURL.absoluteString
+        if URLValidator.isValidURL(urlString) {
+            UserDefaults.homepage = urlString
+            return .result(dialog: IntentDialog("homepageSavedDescription"))
         } else {
             return .result(dialog: IntentDialog("validationError"))
         }

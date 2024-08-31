@@ -84,6 +84,7 @@ struct ContentView: View {
                     .resizable()
                     .frame(width: 64, height: 64)
                     .cornerRadius(10)
+                    .accessibilityLabel("homepageLogo")
             }
             Text("title")
                 .font(.title)

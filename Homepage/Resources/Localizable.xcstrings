@@ -12,6 +12,17 @@
         }
       }
     },
+    "homepageLogo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Homepage for Safari icon"
+          }
+        }
+      }
+    },
     "homepageSaved" : {
       "extractionState" : "manual",
       "localizations" : {

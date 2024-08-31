@@ -14,7 +14,9 @@ struct ShortcutsProvider: AppShortcutsProvider {
         AppShortcut(
             intent: SetHomepageIntent(),
             phrases: [
-                "Set a new URL in \(.applicationName)"
+                "Set a new \(.applicationName)",
+                "Change \(.applicationName) URL",
+                "Change my \(.applicationName)"
             ],
             shortTitle: "setHomepage",
             systemImageName: "house.fill"

@@ -12,7 +12,7 @@
         }
       }
     },
-    "homepageLogo" : {
+    "homepageIcon" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {

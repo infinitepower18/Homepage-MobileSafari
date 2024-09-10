@@ -15,9 +15,9 @@ struct SetHomepageButton: ControlWidget {
             kind: "com.ip18.Homepage.SetHomepageButton"
         ) {
             ControlWidgetButton(action: OpenAppIntent()) {
-                Label("Set Homepage", image: "HouseGear")
+                Label("setHomepage", image: "HouseGear")
             }
         }
-        .displayName("Set Homepage")
+        .displayName("setHomepage")
     }
 }

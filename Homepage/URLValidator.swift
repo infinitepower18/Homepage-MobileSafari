@@ -18,7 +18,7 @@ class URLValidator {
         }
 
         // swiftlint:disable line_length
-        let urlRegex = #"^(https?:\/\/)(([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,})(:(6553[0-5]|655[0-2][0-9]|65[0-4][0-9]{2}|6[0-4][0-9]{3}|[1-5][0-9]{4}|[0-9]{1,4}))?(\/[^\s]*)?$"# // Regular expression for URL validation
+        let urlRegex = #"^(https?:\/\/)(([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,}|((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9]))(:(6553[0-5]|655[0-2][0-9]|65[0-4][0-9]{2}|6[0-4][0-9]{3}|[1-5][0-9]{4}|[0-9]{1,4}))?(\/[^\s]*)?$"# // Regular expression for URL validation
         // swiftlint:enable line_length
 
         // Check if the URL matches the regex

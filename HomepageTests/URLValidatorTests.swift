@@ -72,4 +72,37 @@ struct URLValidatorTests {
         #expect(!URLValidator.isValidURL("http://.com"))
         #expect(!URLValidator.isValidURL("http://example."))
     }
+
+    @Test func validIPAddresses() {
+        #expect(URLValidator.isValidURL("http://127.0.0.1"))
+        #expect(URLValidator.isValidURL("http://192.168.1.1"))
+        #expect(URLValidator.isValidURL("https://255.255.255.255"))
+    }
+
+    @Test func validIPAddressesWithPort() {
+        #expect(URLValidator.isValidURL("http://127.0.0.1:80"))
+        #expect(URLValidator.isValidURL("https://192.168.1.1:443"))
+        #expect(URLValidator.isValidURL("http://10.0.0.1:8080"))
+        #expect(URLValidator.isValidURL("https://8.8.8.8:53/path"))
+    }
+
+    @Test func invalidIPAddresses() {
+        #expect(!URLValidator.isValidURL("http://999.999.999.999"))
+        #expect(!URLValidator.isValidURL("http://256.256.256.256"))
+        #expect(!URLValidator.isValidURL("https://123.456.789.000"))
+        #expect(!URLValidator.isValidURL("http://192.168.1"))
+        #expect(!URLValidator.isValidURL("http://192.168.1.999"))
+    }
+
+    @Test func invalidIPAddressesWithPort() {
+        #expect(!URLValidator.isValidURL("http://127.0.0.1:999999"))
+        #expect(!URLValidator.isValidURL("http://192.168.1.1:-1"))
+        #expect(!URLValidator.isValidURL("https://10.0.0.1:abcd"))
+        #expect(!URLValidator.isValidURL("http://8.8.8.8:"))
+    }
+
+    @Test func validIPAddressesWithQueryAndFragment() {
+        #expect(URLValidator.isValidURL("http://192.168.1.1/path"))
+        #expect(URLValidator.isValidURL("http://10.0.0.1/path#fragment"))
+    }
 }

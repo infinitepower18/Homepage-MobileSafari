@@ -26,7 +26,6 @@
 		9CBD9B092C90BB6C00F9EE29 /* HomepageWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9CBD9AF72C90BB6B00F9EE29 /* HomepageWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9CBD9B152C90BDA300F9EE29 /* OpenAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD9B142C90BDA300F9EE29 /* OpenAppIntent.swift */; };
 		9CBD9B162C90BDA300F9EE29 /* OpenAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD9B142C90BDA300F9EE29 /* OpenAppIntent.swift */; };
-		9CBD9B172C90C27D00F9EE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC4B4FB2BBEF5B5007BC68B /* Assets.xcassets */; };
 		9CC4B4F82BBEF5B4007BC68B /* HomepageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4B4F72BBEF5B4007BC68B /* HomepageApp.swift */; };
 		9CC4B4FA2BBEF5B4007BC68B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */; };
 		9CC4B4FC2BBEF5B5007BC68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC4B4FB2BBEF5B5007BC68B /* Assets.xcassets */; };
@@ -447,7 +446,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CBD9B172C90C27D00F9EE29 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

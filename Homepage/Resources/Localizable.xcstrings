@@ -1,17 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "error" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Error"
-          }
-        }
-      }
-    },
     "homepageIcon" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -41,6 +30,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your homepage has been saved."
+          }
+        }
+      }
+    },
+    "invalidURL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid URL"
           }
         }
       }

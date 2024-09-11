@@ -58,7 +58,7 @@ struct ContentView: View {
                 )
             case .failed:
                 Alert(
-                    title: Text("error"),
+                    title: Text("invalidURL"),
                     message: Text("validationError"),
                     dismissButton: .default(Text("ok"))
                 )

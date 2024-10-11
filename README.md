@@ -12,7 +12,7 @@ To load your homepage whenever a new tab is opened, ensure the extension is enab
 
 [![image](https://ahnafmahmud.com/files/badges/AppStore.svg)](https://apps.apple.com/app/homepage-for-safari/id6481118559)
 
-Available for iOS and visionOS.
+Available for iOS and visionOS. On visionOS, the iPad app will be downloaded.
 
 [Privacy Policy](https://ahnafmahmud.com/apps/Homepage/PrivacyPolicy.html)
 

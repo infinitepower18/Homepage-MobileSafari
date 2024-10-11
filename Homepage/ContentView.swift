@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var showAlert = false
     @State private var alertType: AlertType = .failed
 
+    private let githubURL = "https://github.com/infinitepower18/Homepage-MobileSafari"
+
     @MainActor private var isPhone: Bool {
         UIDevice.current.userInterfaceIdiom == .phone
     }
@@ -66,12 +68,8 @@ struct ContentView: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    if let url = URL(string: "https://github.com/infinitepower18/Homepage-MobileSafari") {
-                        UIApplication.shared.open(url)
-                    }
-                } label: {
-                    Text("viewRepo")
+                if let url = URL(string: githubURL) {
+                    Link("viewRepo", destination: url)
                 }
             }
         }

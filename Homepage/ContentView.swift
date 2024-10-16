@@ -37,6 +37,7 @@ struct ContentView: View {
                         }
                     }
                 }
+                .backport.bounceBasedOnSize()
             }
         }
         .navigationViewStyle(.stack)
@@ -94,6 +95,7 @@ struct ContentView: View {
             .autocorrectionDisabled(true)
             .textInputAutocapitalization(.never)
             .textFieldStyle(.roundedBorder)
+            .backport.disableWritingTools()
             Button {
                 guard URLValidator.isValidURL(urlInput) else {
                     alertType = .failed

@@ -78,13 +78,11 @@ struct ContentView: View {
 
     private var subViews: some View {
         Group {
-            if let iconFileName = Bundle.iconFileName, let icon = UIImage(named: iconFileName) {
-                Image(uiImage: icon)
-                    .resizable()
-                    .frame(width: 64, height: 64)
-                    .cornerRadius(10)
-                    .accessibilityLabel("homepageIcon")
-            }
+            Image("AppImage")
+                .resizable()
+                .frame(width: 64, height: 64)
+                .cornerRadius(10)
+                .accessibilityLabel("homepageIcon")
             Text("title")
                 .font(.title)
             TextField(

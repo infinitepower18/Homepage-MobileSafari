@@ -170,12 +170,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9C0D75C42CC03025001B19F6 /* Helpers */ = {
+		9C0D75C42CC03025001B19F6 /* View Modifiers */ = {
 			isa = PBXGroup;
 			children = (
 				9C0D75C52CC03035001B19F6 /* Backport.swift */,
 			);
-			path = Helpers;
+			path = "View Modifiers";
 			sourceTree = "<group>";
 		};
 		9C38E0212BC3313800594C2C /* Resources */ = {
@@ -261,7 +261,7 @@
 				9CC4B5052BBEF649007BC68B /* Info.plist */,
 				9C7BC9582C811C40004E8F75 /* App Intents */,
 				9C6C85BB2C1D0E8D00FD5951 /* Extensions */,
-				9C0D75C42CC03025001B19F6 /* Helpers */,
+				9C0D75C42CC03025001B19F6 /* View Modifiers */,
 				9CC4B4F72BBEF5B4007BC68B /* HomepageApp.swift */,
 				9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */,
 				9C9674F02C1B8CB200F4E75C /* AlertType.swift */,

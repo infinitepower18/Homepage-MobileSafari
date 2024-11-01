@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var urlInput = ""
     @State private var showAlert = false
     @State private var alertType: AlertType = .failed
+    @State private var showAboutSheet = false
 
     private let githubURL = "https://github.com/infinitepower18/Homepage-MobileSafari"
 
@@ -67,10 +68,16 @@ struct ContentView: View {
                 )
             }
         }
+        .sheet(isPresented: $showAboutSheet) {
+            AboutView()
+        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                if let url = URL(string: githubURL) {
-                    Link("viewRepo", destination: url)
+                Button {
+                    showAboutSheet = true
+                } label: {
+                    Image(systemName: "info.circle")
+                        .accessibilityLabel("aboutButton")
                 }
             }
         }

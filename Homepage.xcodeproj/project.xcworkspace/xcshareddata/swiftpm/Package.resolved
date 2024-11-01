@@ -1,0 +1,15 @@
+{
+  "originHash" : "3afb179d4bb17faf7e97faeecd60ba587596e7097fd9540b8e47fd6d0d07c3ca",
+  "pins" : [
+    {
+      "identity" : "aboutkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/adamfootdev/AboutKit.git",
+      "state" : {
+        "revision" : "ee22b3ff67ee8c6aaf8bae3a022f408b31220017",
+        "version" : "3.4.5"
+      }
+    }
+  ],
+  "version" : 3
+}

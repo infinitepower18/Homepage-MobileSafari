@@ -270,9 +270,8 @@
 				9C7BC9582C811C40004E8F75 /* App Intents */,
 				9C6C85BB2C1D0E8D00FD5951 /* Extensions */,
 				9C0D75C42CC03025001B19F6 /* View Modifiers */,
+				9CDB79A12CD598DD009E12A3 /* Views */,
 				9CC4B4F72BBEF5B4007BC68B /* HomepageApp.swift */,
-				9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */,
-				9CDB799D2CD59156009E12A3 /* AboutView.swift */,
 				9C9674F02C1B8CB200F4E75C /* AlertType.swift */,
 				9C9955772C18B9EC00EB9E17 /* URLValidator.swift */,
 				9CDB799B2CD58DA4009E12A3 /* AboutConfiguration.swift */,
@@ -299,6 +298,15 @@
 				9CC4DA772C1BB03000D7EA5A /* PrivacyInfo.xcprivacy */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9CDB79A12CD598DD009E12A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CC4B4F92BBEF5B4007BC68B /* ContentView.swift */,
+				9CDB799D2CD59156009E12A3 /* AboutView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9CEA5B242BBF3FE500ACF6DC /* HomepageExtension */ = {

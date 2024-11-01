@@ -17,7 +17,7 @@ class AboutConfiguration {
         showWriteReview: .always
     )
 
-    static let app = AKMyApp(
+    static private let app = AKMyApp(
         id: "6481118559",
         name: String(localized: "appName"),
         appIcon: UIImage(named: "AppImage"),
@@ -29,7 +29,7 @@ class AboutConfiguration {
         termsOfUseURL: nil
     )
 
-    static let developer = AKDeveloper(
+    static private let developer = AKDeveloper(
         id: "1632853916",
         name: "Ahnaf Mahmud",
         profiles: []

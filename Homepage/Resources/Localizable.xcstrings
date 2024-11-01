@@ -29,7 +29,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Your homepage has been saved."
+            "value" : "Your homepage has been saved and will be loaded the next time you open a new tab."
           }
         }
       }

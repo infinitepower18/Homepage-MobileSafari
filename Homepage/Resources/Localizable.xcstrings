@@ -176,17 +176,6 @@
           }
         }
       }
-    },
-    "viewRepo" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "GitHub"
-          }
-        }
-      }
     }
   },
   "version" : "1.0"

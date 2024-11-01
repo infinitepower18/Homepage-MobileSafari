@@ -14,8 +14,6 @@ struct ContentView: View {
     @State private var alertType: AlertType = .failed
     @State private var showAboutSheet = false
 
-    private let githubURL = "https://github.com/infinitepower18/Homepage-MobileSafari"
-
     @MainActor private var isPhone: Bool {
         UIDevice.current.userInterfaceIdiom == .phone
     }

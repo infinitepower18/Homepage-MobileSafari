@@ -42,6 +42,7 @@ body:
         - iPad
         - Apple Vision Pro
         - iPod touch
+        - Mac
     validations:
       required: true
   - type: input

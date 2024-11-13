@@ -8,11 +8,15 @@ Unlike macOS, Safari on iOS and visionOS doesn't have the ability to set a homep
 
 To load your homepage whenever a new tab is opened, ensure the extension is enabled and that this app is set under Open New Tabs in Safari Settings.
 
+The app also contains a shortcut to change your homepage URL, which can be used as part of other shortcuts and automations.
+
 ## Download
 
 [![image](https://ahnafmahmud.com/files/badges/AppStore.svg)](https://apps.apple.com/app/homepage-for-safari/id6481118559)
 
 Available for iOS and visionOS. On visionOS, the iPad app will be downloaded.
+
+It's also available for Apple Silicon Macs, in case you want to use the shortcut for scripting purposes.
 
 [Privacy Policy](https://ahnafmahmud.com/apps/Homepage/PrivacyPolicy.html)
 

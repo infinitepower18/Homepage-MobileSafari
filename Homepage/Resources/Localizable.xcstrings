@@ -199,7 +199,7 @@
         }
       }
     },
-    "version" : {
+    "version %@" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {

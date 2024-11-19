@@ -7,5 +7,5 @@
 
 /// The type of alert to show
 enum AlertType {
-    case success, failed
+    case success, failed, about
 }

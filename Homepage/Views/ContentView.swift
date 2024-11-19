@@ -11,8 +11,7 @@ struct ContentView: View {
 
     @State private var urlInput = ""
     @State private var showAlert = false
-    @State private var alertType: AlertType = .failed
-    @State private var showAboutAlert = false
+    @State private var alertType: AlertType = .about
 
     @MainActor private var isPhone: Bool {
         UIDevice.current.userInterfaceIdiom == .phone
@@ -68,20 +67,20 @@ struct ContentView: View {
                     message: Text("validationError"),
                     dismissButton: .default(Text("ok"))
                 )
+            case .about:
+                aboutAlert
             }
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    showAboutAlert = true
+                    alertType = .about
+                    showAlert = true
                 } label: {
                     Image(systemName: "info.circle")
                         .accessibilityLabel("aboutButton")
                 }
             }
-        }
-        .alert(isPresented: $showAboutAlert) {
-            aboutAlert
         }
     }
 

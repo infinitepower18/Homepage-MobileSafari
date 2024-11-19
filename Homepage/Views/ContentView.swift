@@ -137,3 +137,8 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+/// The type of alert to show
+enum AlertType {
+    case success, failed, about
+}

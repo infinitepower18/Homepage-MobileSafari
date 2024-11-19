@@ -10,7 +10,6 @@
 		9CBD9AFA2C90BB6B00F9EE29 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBD9AF92C90BB6B00F9EE29 /* WidgetKit.framework */; };
 		9CBD9AFC2C90BB6B00F9EE29 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBD9AFB2C90BB6B00F9EE29 /* SwiftUI.framework */; };
 		9CBD9B092C90BB6C00F9EE29 /* HomepageWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9CBD9AF72C90BB6B00F9EE29 /* HomepageWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9CDB799A2CD58D3E009E12A3 /* AboutKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CDB79992CD58D3E009E12A3 /* AboutKit */; };
 		9CEA5B3B2BBF3FE500ACF6DC /* HomepageExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9CEA5B232BBF3FE500ACF6DC /* HomepageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -123,7 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDB799A2CD58D3E009E12A3 /* AboutKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +298,6 @@
 			);
 			mainGroup = 9CC4B4EB2BBEF5B4007BC68B;
 			packageReferences = (
-				9CDB79982CD58D3E009E12A3 /* XCRemoteSwiftPackageReference "AboutKit" */,
 			);
 			productRefGroup = 9CC4B4F52BBEF5B4007BC68B /* Products */;
 			projectDirPath = "";
@@ -845,25 +842,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		9CDB79982CD58D3E009E12A3 /* XCRemoteSwiftPackageReference "AboutKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/adamfootdev/AboutKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.4.5;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		9CDB79992CD58D3E009E12A3 /* AboutKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9CDB79982CD58D3E009E12A3 /* XCRemoteSwiftPackageReference "AboutKit" */;
-			productName = AboutKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9CC4B4EC2BBEF5B4007BC68B /* Project object */;
 }

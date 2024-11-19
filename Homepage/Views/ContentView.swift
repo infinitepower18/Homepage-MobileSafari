@@ -12,11 +12,15 @@ struct ContentView: View {
     @State private var urlInput = ""
     @State private var showAlert = false
     @State private var alertType: AlertType = .failed
-    @State private var showAboutSheet = false
+    @State private var showAboutAlert = false
 
     @MainActor private var isPhone: Bool {
         UIDevice.current.userInterfaceIdiom == .phone
     }
+
+    private let supportUrl = URL(string: "https://ahnafmahmud.com/apps/Homepage/support.html")
+
+    @Environment(\.openURL) private var openURL
 
     var body: some View {
         NavigationView {
@@ -66,18 +70,18 @@ struct ContentView: View {
                 )
             }
         }
-        .sheet(isPresented: $showAboutSheet) {
-            AboutView()
-        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    showAboutSheet = true
+                    showAboutAlert = true
                 } label: {
                     Image(systemName: "info.circle")
                         .accessibilityLabel("aboutButton")
                 }
             }
+        }
+        .alert(isPresented: $showAboutAlert) {
+            aboutAlert
         }
     }
 
@@ -115,6 +119,19 @@ struct ContentView: View {
             .disabled(urlInput.trimmingCharacters(in: .whitespaces).isEmpty)
             Text("setupHelp")
         }
+    }
+
+    private var aboutAlert: Alert {
+        Alert(
+            title: Text("appName"),
+            message: Text("version") + Text(verbatim: "\n© 2024 Ahnaf Mahmud"),
+            primaryButton: .cancel(Text("close")),
+            secondaryButton: .default(Text("support")) {
+                if let supportUrl {
+                    openURL(supportUrl)
+                }
+            }
+        )
     }
 }
 

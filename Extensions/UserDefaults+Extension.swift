@@ -20,4 +20,14 @@ extension UserDefaults {
             UserDefaults.group?.set(newValue, forKey: "homepage")
         }
     }
+
+    /// Whether the URL should be cleared
+    static var clearUrl: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: "clear_url")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "clear_url")
+        }
+    }
 }

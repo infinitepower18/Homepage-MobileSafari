@@ -11,6 +11,10 @@ import SwiftUI
 struct HomepageApp: App {
 
     init() {
+        if UserDefaults.clearUrl {
+            UserDefaults.homepage = nil
+            UserDefaults.clearUrl = false
+        }
         UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor.accent
     }
 

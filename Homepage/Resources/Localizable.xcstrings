@@ -194,7 +194,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please enter a valid URL starting with http:// or https://, or about:blank for a blank page"
+            "value" : "Unable to save this URL. Please check that it is in a valid format."
           }
         }
       }

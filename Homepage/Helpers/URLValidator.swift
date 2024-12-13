@@ -8,7 +8,23 @@
 import UIKit
 
 class URLValidator {
-    /// Check if the URL is valid
+
+    /// Checks if the URL is a complete URL
+    /// - Parameter urlString: The URL to check
+    /// - Returns: Whether the URL is complete
+    static func isCompleteURL(_ urlString: String) -> Bool {
+        if urlString == "about:blank" {
+            return true
+        }
+
+        if urlString.starts(with: "http://") || urlString.starts(with: "https://") {
+            return true
+        }
+
+        return false
+    }
+
+    /// Checks if the URL is valid
     /// - Parameter urlString: The URL to validate
     /// - Returns: Whether the URL is valid
     static func isValidURL(_ urlString: String) -> Bool {

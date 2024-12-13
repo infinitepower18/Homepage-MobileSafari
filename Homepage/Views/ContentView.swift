@@ -103,6 +103,9 @@ struct ContentView: View {
             .textFieldStyle(.roundedBorder)
             .backport.disableWritingTools()
             Button {
+                if !URLValidator.isCompleteURL(urlInput) {
+                    urlInput = "http://" + urlInput
+                }
                 guard URLValidator.isValidURL(urlInput) else {
                     alertType = .failed
                     showAlert = true

@@ -9,7 +9,17 @@ import Testing
 @testable import Homepage
 
 struct URLValidatorTests {
+    @Test func isCompleteURL() {
+        #expect(URLValidator.isCompleteURL("http://example.com"))
+        #expect(URLValidator.isCompleteURL("https://example.com"))
+    }
+
+    @Test func isIncompleteURL() {
+        #expect(!URLValidator.isCompleteURL("example.com"))
+    }
+
     @Test func aboutBlank() {
+        #expect(URLValidator.isCompleteURL("about:blank"))
         #expect(URLValidator.isValidURL("about:blank"))
     }
 

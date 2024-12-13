@@ -194,7 +194,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Unable to save this URL. Please check that it is in a valid format."
+            "value" : "The URL entered is invalid. Please check that it is in a valid format."
           }
         }
       }

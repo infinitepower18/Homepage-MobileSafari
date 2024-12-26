@@ -14,10 +14,6 @@ The app also contains a shortcut to change your homepage URL, which can be used 
 
 [![image](https://ahnafmahmud.com/files/badges/AppStore.svg)](https://apps.apple.com/app/homepage-for-safari/id6481118559)
 
-Available for iOS and visionOS. On visionOS, the iPad app will be downloaded.
-
-It's also available for Apple Silicon Macs, in case you want to use the shortcut for scripting purposes.
-
 [Privacy Policy](https://ahnafmahmud.com/apps/Homepage/PrivacyPolicy.html)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F1K06VY)

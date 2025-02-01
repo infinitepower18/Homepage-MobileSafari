@@ -11,7 +11,8 @@ import SwiftUI
 struct HomepageApp: App {
 
     init() {
-        if UserDefaults.clearUrl {
+        let isUiTest = ProcessInfo.processInfo.arguments.contains("ui-testing")
+        if UserDefaults.clearUrl || isUiTest {
             UserDefaults.homepage = nil
             UserDefaults.clearUrl = false
         }

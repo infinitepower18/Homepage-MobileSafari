@@ -80,6 +80,7 @@ struct ContentView: View {
                     Image(systemName: "info.circle")
                         .accessibilityLabel("aboutButton")
                 }
+                .accessibilityIdentifier("About button")
             }
         }
     }
@@ -91,8 +92,10 @@ struct ContentView: View {
                 .frame(width: 64, height: 64)
                 .cornerRadius(10)
                 .accessibilityLabel("homepageIcon")
+                .accessibilityIdentifier("Homepage icon")
             Text("title")
                 .font(.title)
+                .accessibilityIdentifier("Title")
             TextField(
                 "url",
                 text: $urlInput
@@ -101,6 +104,7 @@ struct ContentView: View {
             .autocorrectionDisabled(true)
             .textInputAutocapitalization(.never)
             .textFieldStyle(.roundedBorder)
+            .accessibilityIdentifier("URL input")
             .backport.disableWritingTools()
             Button {
                 if !URLValidator.isCompleteURL(urlInput) {
@@ -118,8 +122,10 @@ struct ContentView: View {
                 Text("save")
                     .font(.title)
             }
+            .accessibilityIdentifier("Save button")
             .disabled(urlInput.trimmingCharacters(in: .whitespaces).isEmpty)
             Text("setupHelp")
+                .accessibilityIdentifier("Help text")
         }
     }
 

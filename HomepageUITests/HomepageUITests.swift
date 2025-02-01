@@ -28,8 +28,8 @@ final class HomepageUITests: XCTestCase {
         let input = app.textFields["URL input"]
         XCTAssertTrue(input.exists)
 
-        let button = app.buttons["Save button"]
-        XCTAssertTrue(button.exists)
+        let saveButton = app.buttons["Save button"]
+        XCTAssertTrue(saveButton.exists)
 
         let helpText = app.staticTexts["Help text"]
         XCTAssertTrue(helpText.exists)
@@ -51,8 +51,8 @@ final class HomepageUITests: XCTestCase {
         let button = app.buttons["Save button"]
         button.tap()
 
-        let successAlert = app.alerts["Homepage Saved"]
-        XCTAssertTrue(successAlert.exists)
+        let alert = app.alerts["Homepage Saved"]
+        XCTAssertTrue(alert.exists)
     }
 
     @MainActor
@@ -68,8 +68,8 @@ final class HomepageUITests: XCTestCase {
         let button = app.buttons["Save button"]
         button.tap()
 
-        let successAlert = app.alerts["Invalid URL"]
-        XCTAssertTrue(successAlert.exists)
+        let alert = app.alerts["Invalid URL"]
+        XCTAssertTrue(alert.exists)
     }
 
     @MainActor
@@ -85,8 +85,8 @@ final class HomepageUITests: XCTestCase {
         let button = app.buttons["Save button"]
         button.tap()
 
-        let successAlert = app.alerts["Homepage Saved"]
-        XCTAssertTrue(successAlert.exists)
+        let alert = app.alerts["Homepage Saved"]
+        XCTAssertTrue(alert.exists)
     }
 
     @MainActor

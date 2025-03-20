@@ -132,7 +132,7 @@ struct ContentView: View {
     private var aboutAlert: Alert {
         Alert(
             title: Text("appName"),
-            message: Text("version \(UIApplication.appVersion ?? "unknown")") + Text(verbatim: "\n© 2025 Ahnaf Mahmud"),
+            message: Text("version \(UIApplication.appVersion ?? "unknown")") + Text(verbatim: "\n") + Text("copyright"),
             primaryButton: .cancel(Text("close")),
             secondaryButton: .default(Text("support")) {
                 if let supportUrl {

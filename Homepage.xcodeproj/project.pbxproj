@@ -574,7 +574,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomepageWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HomepageWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Ahnaf Mahmud";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2025 Ahnaf Mahmud";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -606,7 +606,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomepageWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HomepageWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Ahnaf Mahmud";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2025 Ahnaf Mahmud";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -755,7 +755,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Homepage/Homepage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_ASSET_PATHS = "\"Homepage/Preview Content\"";
 				DEVELOPMENT_TEAM = 3W9UA5X43W;
 				ENABLE_PREVIEWS = YES;
@@ -764,7 +764,7 @@
 				INFOPLIST_FILE = Homepage/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Homepage;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Ahnaf Mahmud";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2025 Ahnaf Mahmud";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -796,7 +796,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Homepage/Homepage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_ASSET_PATHS = "\"Homepage/Preview Content\"";
 				DEVELOPMENT_TEAM = 3W9UA5X43W;
 				ENABLE_PREVIEWS = YES;
@@ -805,7 +805,7 @@
 				INFOPLIST_FILE = Homepage/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Homepage;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Ahnaf Mahmud";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2025 Ahnaf Mahmud";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -840,7 +840,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomepageExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HomepageExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Ahnaf Mahmud";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2025 Ahnaf Mahmud";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -875,7 +875,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomepageExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HomepageExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Ahnaf Mahmud";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2025 Ahnaf Mahmud";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

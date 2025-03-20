@@ -17,7 +17,7 @@ class URLValidator {
             return true
         }
 
-        if urlString.starts(with: "http://") || urlString.starts(with: "https://") {
+        if urlString.starts(with: "http://") || urlString.starts(with: "https://") || urlString.starts(with: "data:") {
             return true
         }
 
@@ -30,6 +30,10 @@ class URLValidator {
     static func isValidURL(_ urlString: String) -> Bool {
         // Check if URL is "about:blank"
         if urlString == "about:blank" {
+            return true
+        }
+
+        if urlString.starts(with: "data:") {
             return true
         }
 

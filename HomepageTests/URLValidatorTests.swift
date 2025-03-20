@@ -115,4 +115,8 @@ struct URLValidatorTests {
         #expect(URLValidator.isValidURL("http://192.168.1.1/path"))
         #expect(URLValidator.isValidURL("http://10.0.0.1/path#fragment"))
     }
+
+    @Test func validDataURL() {
+        #expect(URLValidator.isValidURL("data:,Hello%2C%20World%21"))
+    }
 }

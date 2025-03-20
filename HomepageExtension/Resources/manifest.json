@@ -13,7 +13,7 @@
     "256": "images/icon-256.png",
     "512": "images/icon-512.png"
   },
-  "permissions": ["storage", "nativeMessaging"],
+  "permissions": ["nativeMessaging"],
   "background": {
     "service_worker": "background.js"
   },

@@ -19,6 +19,14 @@ struct ContentView: View {
 
     private let supportUrl = URL(string: "https://ahnafmahmud.com/apps/Homepage/support.html")
 
+    private var infoIcon: String {
+        if #available(iOS 26.0, *) {
+            return "info"
+        } else {
+            return "info.circle"
+        }
+    }
+
     @Environment(\.openURL) private var openURL
 
     var body: some View {
@@ -77,7 +85,7 @@ struct ContentView: View {
                     alertType = .about
                     showAlert = true
                 } label: {
-                    Image(systemName: "info.circle")
+                    Image(systemName: infoIcon)
                         .accessibilityLabel("aboutButton")
                 }
                 .accessibilityIdentifier("About button")

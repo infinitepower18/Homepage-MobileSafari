@@ -98,7 +98,6 @@ struct ContentView: View {
             Image("AppImage")
                 .resizable()
                 .frame(width: 64, height: 64)
-                .cornerRadius(10)
                 .accessibilityLabel("homepageIcon")
                 .accessibilityIdentifier("Homepage icon")
             Text("title")

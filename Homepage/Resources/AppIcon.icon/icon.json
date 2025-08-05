@@ -1,11 +1,19 @@
 {
   "fill" : {
-    "solid" : "display-p3:0.42754,0.53723,0.97022,1.00000"
+    "solid" : "display-p3:0.32157,0.44314,1.00000,1.00000"
   },
   "groups" : [
     {
       "layers" : [
         {
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : {
+                "solid" : "srgb:0.32157,0.44314,1.00000,1.00000"
+              }
+            }
+          ],
           "image-name" : "house-transparent.png",
           "name" : "house-transparent"
         }

@@ -17,8 +17,6 @@ struct ContentView: View {
         UIDevice.current.userInterfaceIdiom == .phone
     }
 
-    private let supportUrl = URL(string: "https://ahnafmahmud.com/apps/Homepage/support.html")
-
     private var infoIcon: String {
         if #available(iOS 26.0, *) {
             return "info"
@@ -142,8 +140,8 @@ struct ContentView: View {
             message: Text("version \(UIApplication.appVersion ?? "unknown")") + Text(verbatim: "\n") + Text("copyright"),
             primaryButton: .cancel(Text("close")),
             secondaryButton: .default(Text("support")) {
-                if let supportUrl {
-                    openURL(supportUrl)
+                if let url = Constants.supportURL {
+                    openURL(url)
                 }
             }
         )

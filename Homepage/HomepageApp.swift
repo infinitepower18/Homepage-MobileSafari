@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct HomepageApp: App {
 
+    @Environment(\.openURL) private var openURL
+
     init() {
         let isUiTest = ProcessInfo.processInfo.arguments.contains("ui-testing")
         if UserDefaults.clearUrl || isUiTest {
@@ -23,6 +25,17 @@ struct HomepageApp: App {
         WindowGroup {
             ContentView()
                 .tint(.accent)
+        }
+        .commands {
+            CommandGroup(replacing: .help) {
+                Button {
+                    if let url = Constants.supportURL {
+                        openURL(url)
+                    }
+                } label: {
+                    Label("support", systemImage: "questionmark.circle")
+                }
+            }
         }
     }
 }

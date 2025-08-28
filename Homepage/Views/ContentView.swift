@@ -25,6 +25,10 @@ struct ContentView: View {
         }
     }
 
+    private var widthDivider: CGFloat {
+        ProcessInfo.processInfo.isiOSAppOnMac ? 1.5 : 1.7
+    }
+
     @Environment(\.openURL) private var openURL
 
     var body: some View {
@@ -39,7 +43,7 @@ struct ContentView: View {
                         HStack {
                             Spacer()
                             stack
-                                .frame(width: geometry.size.width / 2)
+                                .frame(width: geometry.size.width / widthDivider)
                                 .frame(minHeight: geometry.size.height)
                             Spacer()
                         }

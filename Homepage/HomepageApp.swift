@@ -22,19 +22,34 @@ struct HomepageApp: App {
     }
 
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .tint(.accent)
+        if #available(iOS 17.0, *) {
+            return WindowGroup {
+                ContentView()
+                    .tint(.accent)
+            }
+            .defaultSize(width: 750, height: 500)
+            .commands {
+                helpCommandGroup
+            }
+        } else {
+            return WindowGroup {
+                ContentView()
+                    .tint(.accent)
+            }
+            .commands {
+                helpCommandGroup
+            }
         }
-        .commands {
-            CommandGroup(replacing: .help) {
-                Button {
-                    if let url = Constants.supportURL {
-                        openURL(url)
-                    }
-                } label: {
-                    Label("support", systemImage: "questionmark.circle")
+    }
+
+    private var helpCommandGroup: some Commands {
+        CommandGroup(replacing: .help) {
+            Button {
+                if let url = Constants.supportURL {
+                    openURL(url)
                 }
+            } label: {
+                Label("support", systemImage: "questionmark.circle")
             }
         }
     }

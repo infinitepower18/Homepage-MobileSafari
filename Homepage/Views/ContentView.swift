@@ -117,7 +117,7 @@ struct ContentView: View {
             .backport.disableWritingTools()
             Button {
                 if !URLValidator.isCompleteURL(urlInput) {
-                    urlInput = "http://" + urlInput
+                    urlInput = "https://" + urlInput
                 }
                 guard URLValidator.isValidURL(urlInput) else {
                     alertType = .failed

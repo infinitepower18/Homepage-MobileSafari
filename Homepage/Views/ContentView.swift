@@ -13,10 +13,6 @@ struct ContentView: View {
     @State private var showAlert = false
     @State private var alertType: AlertType = .about
 
-    @MainActor private var isPhone: Bool {
-        UIDevice.current.userInterfaceIdiom == .phone
-    }
-
     private var infoIcon: String {
         if #available(iOS 26.0, *) {
             return "info"
@@ -25,29 +21,16 @@ struct ContentView: View {
         }
     }
 
-    private var widthDivider: CGFloat {
-        ProcessInfo.processInfo.isiOSAppOnMac ? 1.5 : 1.7
-    }
-
     @Environment(\.openURL) private var openURL
 
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
                 ScrollView(.vertical) {
-                    if isPhone {
-                        stack
-                            .frame(width: geometry.size.width)
-                            .frame(minHeight: geometry.size.height)
-                    } else {
-                        HStack {
-                            Spacer()
-                            stack
-                                .frame(width: geometry.size.width / widthDivider)
-                                .frame(minHeight: geometry.size.height)
-                            Spacer()
-                        }
-                    }
+                    stack
+                        .frame(maxWidth: 600)
+                        .frame(maxWidth: .infinity)
+                        .frame(minHeight: geometry.size.height)
                 }
                 .backport.bounceBasedOnSize()
             }
